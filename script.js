@@ -1,0 +1,34 @@
+const calculatorScreen = document.querySelector('.calculator-screen');
+
+const updateScreen = (number) => {
+    calculatorScreen.value = number;
+}
+
+const numbers = document.querySelectorAll(".number");
+
+numbers.forEach((number) => {
+    number.addEventListener("click", () =>{
+        inputNumber(event.target.value);
+        updateScreen(currentNumber);
+    });
+});
+
+let prevNumber = '';
+let calculationOperator = '';
+let currentNumber = '0';
+
+const inputNumber = (number) => {
+    if (currentNumber === '0') {
+        currentNumber = number;    
+    } else {
+        currentNumber += number;
+    }
+}
+
+const operators = document.querySelectorAll(".operator");
+operators.forEach((operator) => {
+    operator.addEventListener("click", (event) =>{
+        console.log(event.target.value);
+    });
+});
+
