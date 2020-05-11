@@ -26,12 +26,14 @@
 
 button {
     height: 80px;
-    background-color: gray;
+    background-color: grey;
     border: 1px solid black;
     font-size: 32px;
     color: #fff;
     width: 25%;
     outline: none;
+    border-radius: 10px;
+    margin: 2px 2px;
 }
 
 .all-clear, .zero-btn{
@@ -43,7 +45,7 @@ button {
 }
 
 button:hover{
-    background-color: darkgray;
+    background-color: darkgrey;
 }
 
 .operator:hover, .equal-sign:hover {
